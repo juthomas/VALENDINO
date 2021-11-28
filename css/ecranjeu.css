@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Bourrage";
-  src:url("../fonts/Bourrage.otf");
+  src:url("../fonts/Bourrage.otf") format("opentype");
 }
 
 html, body {
