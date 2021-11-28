@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Bourrage";
+  src:url("../fonts/Bourrage.otf");
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+body{
+  background-color: #faf3dd;
+  font-family: "Bourrage";
+  overflow: hidden;
+  margin: 0;
+}
+
+header{
+  position: absolute;
+  background-image: url(../images/2.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #faf3dd;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  border-bottom: 5px solid black;
+  height: 80px;
+  padding-right: 30px;
+  padding-top: 15px;
+
+}
+
+.headerFeuilles{
+  width: 100%;
+  height: 90%;
+  top: -52%;
+  overflow: hidden;
+  position: absolute;
+}
+
+#cparti{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  text-transform: uppercase;
+  font-size: 14rem;
+  margin: 0;
+  animation: cparti 5s ease-in-out;
+  animation-delay: 2s;
+  transition: visibility 0.3s ease-in-out;
+}
+
+@keyframes cparti {
+  0% {
+    font-size: 0;
+    visibility: visible;
+  }
+
+  50% { font-size: 14rem; }
+
+  90% {
+    font-size: 14rem;
+    filter: opacity(1);
+  }
+
+  100% {
+    filter: opacity(0);
+  }
+}
+
+
+.nbtacos{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 40px;
+}
+
+.nbtacos span{
+  font-size: 65px;
+  margin-left: 11px;
+  margin-top: 10px;
+}
+
+#lukas{
+  position: fixed;
+  bottom: 10px;
+  right: 50%;
+  width: 330px;
+}
+
+#tacos{
+  width: 100px;
+}
+
+.meteorite{
+  position: absolute;
+  top: -200px;
+  width: 120px;
+}
+
+.meteorite img{
+  width: 100%;
+  animation: bombe 0.2s infinite;
+}
+
+
+#meteorite1{
+  right: 450px;
+  width: 110px;
+ }
+
+#meteoriteFire{
+  right: 1400px;
+  width: 250px;
+ }
+
+
+ @keyframes chute {
+   0%{transform: translateY(-100px);}
+   100%{transform: translateY(1000px);}
+ }
+
+@keyframes bombe {
+  0%{
+    transform: scale(100%);}
+  100%{
+    transform: scale(107%);}
+}
+
+.tacos{
+  position: absolute;
+  width: 130px;
+ }
+
+ #tacos1{
+   top: -100px;
+   right: 300px;
+ }
+
+.paused{
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused; 
+  animation-play-state:paused;
+}
+
+ @keyframes chutetacos {
+   0%{
+     transform: translateY(-100px);
+   }
+   100%{
+     transform: translateY(1000px);
+   }
+ }
+
+.anime{
+  height: 93mm;
+  width: 93mm;
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
+  overflow: hidden;
+  background-image: url("../images/LukasAnime.png");
+  /* animation: grr 0.0s infinite steps(3);  */
+  /* Bouffer animation */
+}
+
+.sol{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+
+
+@keyframes grr {
+  from {
+    background-position: 0 0;
+    }
+  to {
+    background-position: -100% 0%;
+  }
+}
+
+@keyframes light {
+  O%{transform: translateX(0);}
+
+  2%{transform: translateX(0) rotateY(180deg);}
+
+  58%{transform: translateX(78vw) rotateY(180deg);}
+
+  60%{
+    transform: translateX(78vw);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.pause{
+  position: absolute;
+  left: 46px;
+  top: 20px;
+  width: 45px;
+}
+
+#Vies1{
+  position: absolute;
+  left: 130px;
+  top: 10px;
+  width: 80px;
+}
+
+#Vies2{
+  position: absolute;
+  left: 200px;
+  top: 10px;
+  width: 80px;
+}
+
+#Vies3{
+  position: absolute;
+  left: 270px;
+  top: 10px;
+  width: 80px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
+
+  .nbtacos{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 30px;
+  }
+
+  .nbtacos span{
+    font-size: 40px;
+    margin-left: 11px;
+    margin-top: 10px;
+  }
+
+  .pause{
+    left: 30px;
+    top: 30px;
+    width: 30px;
+  }
+
+  @keyframes cparti {
+    0% {
+      font-size: 0;
+      visibility: visible;
+    }
+
+    50% { font-size: 3.5rem; }
+
+    90% {
+      font-size: 3.5rem;
+      filter: opacity(1);
+    }
+
+    100% {
+      font-size: 3.5rem;
+      filter: opacity(0);
+    }
+  }
+
+  .anime{
+    width: 175px;
+    height: 175px;
+    background-size: 400% 100%;
+  }
+
+  .tacos{
+    position: absolute;
+    width: 80px;
+   }
+
+  #tacos1{
+    top: -100px;
+  }
+
+  #meteorite1{
+    right: 250px;
+    width: 70px;
+   }
+
+  #meteoriteFire{
+    right: 40px;
+    width: 110px;
+   }
+
+  #meteorite3{
+    right: 100px;
+    width: 70px;
+   }
+
+   @keyframes light {
+     O%{transform: translateX(1vw);}
+
+     2%{transform: translateX(1vw) rotateY(180deg);}
+
+     58%{transform: translateX(55vw) rotateY(180deg);}
+
+     60%{
+       transform: translateX(55vw);
+     }
+     100%{
+       transform: translateX(1vw);
+     }
+   }
+
+}
